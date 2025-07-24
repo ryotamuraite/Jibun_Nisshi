@@ -90,19 +90,22 @@
   .icon-sm {
     width: 20px;
     height: 20px;
-    vertical-align: middle;
-    display: inline-block;
+    vertical-align: top;
+    display: block;
     transition: color 0.15s ease-in-out, transform 0.15s ease-in-out;
   }
 
   /* === Menu Panel === */
   .menu-panel {
     width: 16rem;
+    will-change: transform;
+    min-height: auto;
     padding: 0.5rem 0;
     border: 1px solid #00C3D0;
     border-radius: 0.5rem;
     background-color: white;
     box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    box-sizing: border-box;
   }
 
   .menu-panel-intro {
@@ -118,6 +121,7 @@
     gap: 0.75rem;
     padding: 0.5rem 1rem;
     width: 100%;
+    min-height: 2.5rem;
     background-color: white;
     color: #1F2937;
     font-weight: 500;
@@ -125,10 +129,24 @@
     outline: none;
     cursor: pointer;
     border-radius: 0.375rem;
+    box-sizing: border-box;
+    contain-intrinsic-size: 2.5rem;
     transition:
       background-color 0.15s ease-in-out,
       color 0.15s ease-in-out,
       box-shadow 0.15s ease-out;
+  }
+
+  .menu-panel-item span {
+    line-height: 1.25rem;
+    padding: 0;
+  }
+
+  .menu-panel-item svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
   }
 
   .menu-panel-item:hover {
@@ -140,11 +158,13 @@
   
   .menu-panel-item:hover svg,
   .menu-panel-item:hover span {
+    min-height: 1.4rem;
     color: white;
   }
   
   .menu-panel-item:focus,
   .menu-panel-item:focus-visible {
+    min-height: 2.5rem;
     outline: none;
     border: none;
     box-shadow: none;
