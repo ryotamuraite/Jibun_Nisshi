@@ -1,6 +1,12 @@
+/* src/index.css */
+@import "./styles/brand.css";
+@import "./styles/header.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 @layer base {
   html {
@@ -42,7 +48,7 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2em;
   line-height: 1.1;
 }
 
@@ -63,6 +69,11 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 @media (prefers-color-scheme: light) {

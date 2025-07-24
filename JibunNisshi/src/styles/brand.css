@@ -1,0 +1,25 @@
+/* src/styles/brand.css */
+
+/* Tailwindプリミティブ（必要なら） */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ブランドカラーのユーティリティ定義 */
+@layer utilities {
+  .bg-brand-cyan {
+    background-color: #00C3D0;
+  }
+
+  .text-brand-cyan {
+    color: #00C3D0;
+  }
+
+  .border-brand-cyan {
+    border-color: #00C3D0;
+  }
+
+  .hover\:bg-brand-cyan:hover {
+    background-color: #00C3D0;
+  }
+}

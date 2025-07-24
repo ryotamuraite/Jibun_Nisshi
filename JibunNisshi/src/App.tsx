@@ -8,6 +8,8 @@ import EntryForm from "./components/EntryForm";
 import ProgressTree from "./components/ProgressTree";
 // import ExportButton from "./components/ExportButton";
 import dayjs from "dayjs";
+import "./index.css";
+
 
 // 型定義
 type WorkRecord = {
