@@ -1,4 +1,3 @@
-/* src/styles/header.css */
 @import "./brand.css";
 
 @tailwind base;
@@ -7,19 +6,19 @@
 
 /* === Layout Styles === */
 
-@layer components {
-  .header-container {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    height: 6rem;
-    width: 100%;
-    background-color: #00C3D0;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-                0 2px 4px -2px rgba(0, 0, 0, 0.1); /* shadow-md */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #00C3D0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
 
+@layer components {
+  /* === Header === */
   .header-inner {
     max-width: 72rem;
     margin-inline: auto;
@@ -86,7 +85,7 @@
     cursor: pointer;
   }
 
-  /* === Icon Size === */
+  /* === Icon === */
   .icon-sm {
     width: 20px;
     height: 20px;
@@ -132,17 +131,15 @@
   }
 
   .menu-panel-item:hover {
-    background-color: #00C3D0 !important;
+    background-color: #00C3D0;
     color: white;
-    outline: none !important;
-    border: none !important;
   }
-  
+
   .menu-panel-item:hover svg,
   .menu-panel-item:hover span {
     color: white;
   }
-  
+
   .menu-panel-item:focus,
   .menu-panel-item:focus-visible {
     outline: none;
@@ -155,7 +152,7 @@
   }
 }
 
-/* === Menu Animation === */
+/* === Animation === */
 @keyframes menuFadeSlide {
   0% {
     opacity: 0;
