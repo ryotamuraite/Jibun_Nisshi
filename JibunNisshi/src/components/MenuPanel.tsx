@@ -1,10 +1,10 @@
 // src/components/MenuPanel.tsx
 import { useState, useRef, useEffect, type FC } from "react";
-import menuIcon from "../assets/menu.svg";
 import {
   ArrowDownTrayIcon,
   Cog6ToothIcon,
   LockClosedIcon,
+  Bars3Icon,
 } from "@heroicons/react/24/outline";
 import "../styles/header.css";
 
@@ -56,18 +56,14 @@ const MenuPanel: FC<Props> = ({ onExport }) => {
     >
       <button
         onClick={() => setOpen(!open)}
-        className="header-icon bg-transparent border-none p-0 focus:outline-none focus:ring-0 focus:bg-transparent"
+        className="bg-transparent border-none p-0 focus:outline-none"
         aria-label="メニューを開く"
       >
-        <img
-          src={menuIcon}
-          alt="Menu Icon"
-          className="w-5 h-5 shrink-0"
-        />
+        <Bars3Icon className="icon-sm-menu shrink-0" strokeWidth={2} />
       </button>
 
       {open && (
-        <div className="menu-panel absolute top-full left-1/2 translate-x-[-80%] mt-2 z-50 animate-scale">
+        <div className="menu-panel absolute top-full left-1/2 translate-x-[0%] mt-2 z-50 animate-scale">
           <p className="menu-panel-intro">こんにちは、RYOさん</p>
           <ul className="list-none px-2">
             {menuItems.map(({ label, icon: Icon, onClick }, index) => (

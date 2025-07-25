@@ -12,12 +12,11 @@ type Props = {
 
 const Header: FC<Props> = ({ onExport }) => {
   return (
-    <header className="header-container">
+    <header className="header-container w-full">
       <div className="header-inner">
-        <h1 className="header-title">Jibun_Nisshi</h1>
-
         {/* メニュー開閉トリガーのみ表示 */}
         <MenuPanel onExport={onExport} />
+        <h1 className="header-title">Jibun_Nisshi</h1>
       </div>
     </header>
   );

@@ -1,8 +1,8 @@
+/* src/App.css */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  max-width: none; /* ← 念のため追加して制限を外す */
+  padding: 0; /* デバッグ目的で一旦無しにしてみる */
 }
 
 .logo {
